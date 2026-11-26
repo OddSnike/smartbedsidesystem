@@ -92,6 +92,7 @@ class SmartBedsideSystem:
         if stop:
             self.alarm_on = False
             GPIO.output(self.BUZZER_PIN, self.alarm_on)
+            GPIO.output(self.ALARM_LED_PIN, self.alarm_on)
 
     def set_o2_valve_angle(self, angle: float) -> None:
         """
